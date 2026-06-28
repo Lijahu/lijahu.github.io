@@ -13,13 +13,15 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Cursor ambient glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="container nav">
       <a href="#top" class="brand" aria-label="Homepage">
         <span class="brand-mark">LH</span>
         <span class="brand-text">Liam Humphreys</span>
       </a>
-
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -28,12 +30,8 @@
         <a href="#contact">Contact</a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">◐</button>
       </nav>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
-        Menu
-      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
     </div>
-
     <div id="mobile-menu" class="mobile-menu">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -44,21 +42,29 @@
   </header>
 
   <main id="main">
+
+    <!-- ── HERO ── -->
     <section class="hero section" id="top">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">MSc Human and Biological Robotics · Imperial College London</p>
-          <h1>Engineering systems that connect high-performance design with human need.</h1>
-          <p class="hero-text">
-            I’m Liam Humphreys, a robotics and engineering researcher focused on sensing, control,
-            instrumentation, and human-centred device design.
-          </p>
 
+        <div class="hero-photo-wrap fade-in">
+          <img
+            src="assets/headshot.jpg"
+            alt="Portrait of Liam Humphreys"
+            width="480"
+            height="600"
+            loading="eager"
+            class="hero-photo"
+          />
+        </div>
+
+        <div class="hero-copy">
+          <h1 class="hero-name">Liam<br>Humphreys</h1>
+          <p class="hero-role">MSc Human &amp; Biological Robotics · Imperial College London</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View projects</a>
             <a class="btn btn-secondary" href="assets/CV_New.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
           </div>
-
           <ul class="hero-meta" role="list">
             <li>London, UK</li>
             <li><a href="mailto:liam@newworldresources.com">liam@newworldresources.com</a></li>
@@ -66,18 +72,10 @@
           </ul>
         </div>
 
-        <div class="hero-card fade-in">
-          <img
-            src="assets/headshot.jpg"
-            alt="Portrait of Liam Humphreys"
-            width="720"
-            height="900"
-            loading="eager"
-          />
-        </div>
       </div>
     </section>
 
+    <!-- ── ABOUT ── -->
     <section class="section" id="about">
       <div class="container narrow reveal-up">
         <p class="section-label">Profile</p>
@@ -88,12 +86,13 @@
           and physical prototyping.
         </p>
         <p>
-          My current work centres on assistive and rehabilitative systems, especially projects that combine
+          My current work centres on assistive and rehabilitative systems — especially projects that combine
           hardware, signal processing, and mechanical design under real engineering constraints.
         </p>
       </div>
     </section>
 
+    <!-- ── PROJECTS ── -->
     <section class="section" id="projects">
       <div class="container">
         <div class="section-heading">
@@ -101,51 +100,34 @@
             <p class="section-label">Selected work</p>
             <h2>Projects</h2>
           </div>
-          <p class="section-intro">
-            A visual expansion of the projects and engineering work highlighted in my CV.
-          </p>
+          <p class="section-intro">A visual expansion of the projects and engineering work highlighted in my CV.</p>
         </div>
 
         <div class="projects-grid">
+
           <article class="project-card fade-in">
             <div class="project-media">
-              <img
-                src="assets/proprio-device-1.jpg"
-                alt="Prototype of multi-degree-of-freedom proprioceptive feedback device"
-                width="1200"
-                height="800"
-                loading="lazy"
-              />
+              <img src="assets/proprio-device-1.jpg" alt="Prototype of multi-degree-of-freedom proprioceptive feedback device" width="1200" height="800" loading="lazy" />
             </div>
             <div class="project-body">
               <p class="project-tag">Current dissertation</p>
               <h3>Multi-DoF Proprioceptive Feedback Device</h3>
-              <p>
-                Designing and building a multi-degree-of-freedom device for real-time proprioceptive feedback
-                in upper-limb prosthesis applications, with emphasis on grasp identification.
-              </p>
+              <p>Designing and building a multi-degree-of-freedom device for real-time proprioceptive feedback in upper-limb prosthesis applications, with emphasis on grasp identification.</p>
               <button class="project-toggle" aria-expanded="false">Read more</button>
               <div class="project-details">
-                <div class="details-grid">
-                  <img
-                    src="assets/proprio-device-2.jpg"
-                    alt="Second image of proprioceptive feedback system development"
-                    width="1200"
-                    height="800"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h4>What I worked on</h4>
-                    <ul>
-                      <li>System architecture and concept definition.</li>
-                      <li>Hardware prototyping and iterative mechanical design.</li>
-                      <li>Experimental validation strategy for embodied feedback.</li>
-                    </ul>
-                    <h4>What mattered</h4>
-                    <p>
-                      This project required full-stack engineering: device concept, sensing logic, physical
-                      build constraints, and human-centred testing.
-                    </p>
+                <div class="project-details-inner">
+                  <div class="details-grid">
+                    <img src="assets/proprio-device-2.jpg" alt="Second image of proprioceptive feedback system" width="1200" height="800" loading="lazy" />
+                    <div>
+                      <h4>What I worked on</h4>
+                      <ul>
+                        <li>System architecture and concept definition.</li>
+                        <li>Hardware prototyping and iterative mechanical design.</li>
+                        <li>Experimental validation strategy for embodied feedback.</li>
+                      </ul>
+                      <h4>What mattered</h4>
+                      <p>Full-stack engineering: device concept, sensing logic, physical build constraints, and human-centred testing.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -154,36 +136,26 @@
 
           <article class="project-card fade-in">
             <div class="project-media">
-              <img
-                src="assets/insole-1.jpg"
-                alt="Prototype sensory substitution insole with feedback electronics"
-                width="1200"
-                height="800"
-                loading="lazy"
-              />
+              <img src="assets/insole-1.jpg" alt="Prototype sensory substitution insole with feedback electronics" width="1200" height="800" loading="lazy" />
             </div>
             <div class="project-body">
               <p class="project-tag">Human-centred design</p>
               <h3>Sensory Substitution Insole for Peripheral Neuropathy</h3>
-              <p>
-                Designed a closed-loop feedback system using plantar pressure sensing, vibrotactile actuation,
-                ultrasonic sensing, and drop-foot assistance concepts.
-              </p>
+              <p>Designed a closed-loop feedback system using plantar pressure sensing, vibrotactile actuation, ultrasonic sensing, and drop-foot assistance concepts.</p>
               <button class="project-toggle" aria-expanded="false">Read more</button>
               <div class="project-details">
-                <div class="details-grid">
-                  <div>
-                    <h4>Design focus</h4>
-                    <ul>
-                      <li>Clinical need and user requirements.</li>
-                      <li>Feedback pathway design and actuator selection.</li>
-                      <li>Prototype development under safety and hardware constraints.</li>
-                    </ul>
-                    <h4>Why it stands out</h4>
-                    <p>
-                      It combined rehabilitation thinking with practical embedded-system design rather than
-                      treating the problem as a purely theoretical exercise.
-                    </p>
+                <div class="project-details-inner">
+                  <div class="details-grid">
+                    <div>
+                      <h4>Design focus</h4>
+                      <ul>
+                        <li>Clinical need and user requirements.</li>
+                        <li>Feedback pathway design and actuator selection.</li>
+                        <li>Prototype development under safety and hardware constraints.</li>
+                      </ul>
+                      <h4>Why it stands out</h4>
+                      <p>Combined rehabilitation thinking with practical embedded-system design rather than a purely theoretical exercise.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -192,36 +164,24 @@
 
           <article class="project-card fade-in">
             <div class="project-media">
-              <img
-                src="assets/vapour-deposition.jpg"
-                alt="Experimental materials research and silicon substrate analysis"
-                width="1200"
-                height="800"
-                loading="lazy"
-              />
+              <img src="assets/vapour-deposition.jpg" alt="Experimental materials research and silicon substrate analysis" width="1200" height="800" loading="lazy" />
             </div>
             <div class="project-body">
               <p class="project-tag">Experimental research</p>
               <h3>Self-Assembled Monolayer Deposition Research</h3>
-              <p>
-                Researched vapour deposition parameter optimisation on silicon substrates and performed full
-                data analysis in Python with publication-standard reporting.
-              </p>
+              <p>Researched vapour deposition parameter optimisation on silicon substrates and performed full data analysis in Python with publication-standard reporting.</p>
               <button class="project-toggle" aria-expanded="false">Read more</button>
               <div class="project-details">
-                <div class="details-grid">
-                  <div>
-                    <h4>Methods used</h4>
-                    <ul>
-                      <li>Experimental planning and parameter iteration.</li>
-                      <li>Python-based analysis using scientific libraries.</li>
-                      <li>Technical documentation to a high academic standard.</li>
-                    </ul>
-                    <h4>Skills demonstrated</h4>
-                    <p>
-                      This project strengthened my ability to move from raw experiment output to interpretable,
-                      defensible engineering conclusions.
-                    </p>
+                <div class="project-details-inner">
+                  <div class="details-grid">
+                    <div>
+                      <h4>Methods used</h4>
+                      <ul>
+                        <li>Experimental planning and parameter iteration.</li>
+                        <li>Python-based analysis using scientific libraries.</li>
+                        <li>Technical documentation to a high academic standard.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,44 +190,35 @@
 
           <article class="project-card fade-in">
             <div class="project-media">
-              <img
-                src="assets/rocket-club.jpg"
-                alt="Model rocket engineering and launch project"
-                width="1200"
-                height="800"
-                loading="lazy"
-              />
+              <img src="assets/rocket-club.jpg" alt="Model rocket engineering and launch project" width="1200" height="800" loading="lazy" />
             </div>
             <div class="project-body">
               <p class="project-tag">Hands-on engineering</p>
               <h3>Model Rocket Club</h3>
-              <p>
-                Co-founded a club designing and launching 3D-printed rockets, with responsibility for CAD,
-                systems integration, and centre-of-pressure versus centre-of-gravity analysis.
-              </p>
+              <p>Co-founded a club designing and launching 3D-printed rockets, with responsibility for CAD, systems integration, and CoP/CoG stability analysis.</p>
               <button class="project-toggle" aria-expanded="false">Read more</button>
               <div class="project-details">
-                <div class="details-grid">
-                  <div>
-                    <h4>Engineering themes</h4>
-                    <ul>
-                      <li>Applied mechanics and stability analysis.</li>
-                      <li>CAD workflow and prototype iteration.</li>
-                      <li>Team-led technical execution in a practical environment.</li>
-                    </ul>
-                    <h4>Why include it</h4>
-                    <p>
-                      It shows comfort with building real things, not just analysing them.
-                    </p>
+                <div class="project-details-inner">
+                  <div class="details-grid">
+                    <div>
+                      <h4>Engineering themes</h4>
+                      <ul>
+                        <li>Applied mechanics and stability analysis.</li>
+                        <li>CAD workflow and prototype iteration (Fusion 360).</li>
+                        <li>Team-led technical execution in a practical environment.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
+    <!-- ── EDUCATION ── -->
     <section class="section alt-surface" id="education">
       <div class="container">
         <div class="section-heading">
@@ -276,29 +227,28 @@
             <h2>Education</h2>
           </div>
         </div>
-
         <div class="timeline">
           <article class="timeline-item reveal-up">
-            <div class="timeline-meta">2025–2026</div>
+            <div class="timeline-meta">2025 – 2026</div>
             <div class="timeline-content">
               <h3>Imperial College London</h3>
               <p>MSc in Human and Biological Robotics</p>
-              <p class="muted">Relevant study: data analysis, robotics, biomechanics, assistive and rehabilitative device design, reinforcement learning.</p>
+              <p class="muted">Data analysis, robotics, biomechanics, assistive and rehabilitative device design, reinforcement learning.</p>
             </div>
           </article>
-
           <article class="timeline-item reveal-up">
-            <div class="timeline-meta">2022–2025</div>
+            <div class="timeline-meta">2022 – 2025</div>
             <div class="timeline-content">
               <h3>Aberystwyth University</h3>
               <p>BEng in Engineering Physics — First Class Honours</p>
-              <p class="muted">Relevant study: systems engineering, control theory, electricity and magnetism, sensors and instrumentation, material physics.</p>
+              <p class="muted">Systems engineering, control theory, electricity and magnetism, sensors and instrumentation, material physics.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ── SKILLS ── -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section-heading">
@@ -307,36 +257,33 @@
             <h2>Skills</h2>
           </div>
         </div>
-
         <div class="skills-grid">
           <article class="skill-panel">
             <h3>Programming</h3>
             <p>Python, Pandas, NumPy, SciPy, Matplotlib, PyTorch, MATLAB</p>
           </article>
           <article class="skill-panel">
-            <h3>CAD & design</h3>
+            <h3>CAD &amp; design</h3>
             <p>SolidWorks, Fusion 360, OnShape</p>
           </article>
           <article class="skill-panel">
-            <h3>Engineering themes</h3>
+            <h3>Engineering</h3>
             <p>Sensing, control, instrumentation, prototyping, human-centred engineering</p>
           </article>
           <article class="skill-panel">
             <h3>Languages</h3>
-            <p>English, Italian, German</p>
+            <p>English (native), Italian (A2), German (A2)</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ── CONTACT ── -->
     <section class="section alt-surface" id="contact">
       <div class="container contact-card">
         <p class="section-label">Get in touch</p>
         <h2>Contact</h2>
-        <p>
-          I’m interested in engineering roles and research opportunities at the intersection of advanced hardware
-          and human-centred application.
-        </p>
+        <p>I'm interested in engineering roles and research opportunities at the intersection of advanced hardware and human-centred application.</p>
         <div class="contact-actions">
           <a class="btn btn-primary" href="mailto:liam@newworldresources.com">Email me</a>
           <a class="btn btn-secondary" href="assets/CV_New.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
@@ -344,6 +291,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
