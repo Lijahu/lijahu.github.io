@@ -75,8 +75,8 @@ button { font: inherit; cursor: pointer; }
   position: fixed;
   top: 0;
   left: 0;
-  width: 700px;
-  height: 700px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
 
   /* Soft radial blob using the CSS variable for color */
