@@ -51,7 +51,7 @@ if (glow && window.matchMedia("(pointer: fine)").matches) {
   // Adjust the 0.08 factor to change how "sticky" the lag feels:
   //   lower = more lag / dreamier (try 0.04)
   //   higher = snappier / less lag (try 0.2)
-  const LERP = 0.08;
+  const LERP = 0.2;
 
   function lerp(a, b, t) { return a + (b - a) * t; }
 
